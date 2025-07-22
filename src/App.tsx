@@ -2,6 +2,11 @@
 
 import { useState } from "react"
 import { Github, Linkedin, Mail, ExternalLink, Download, Code, Palette, Database, Globe, Menu, X } from "lucide-react"
+import profileImage from "./assets/1610396085652.jpg";
+import skateFallRetryImage from "./assets/skatefallretry2.jpg";
+import RentCarImage from "./assets/rentcar4.jpg";
+import UltimateChecklistImage from "./assets/ultimatechecklist.png";
+
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -26,7 +31,7 @@ export default function App() {
       title: "Skate Fall Retry",
       description:
         "A collaborative Platform to learn SkateBoarding where users can interact through Posts and Comments. For Deployement i used Railway for Backend hosting, Vercel for Frontend and Neon PostgreSQL for the DB.",
-      image: "https://via.placeholder.com/300x200/3b82f6/ffffff?text=E-Commerce",
+      image: skateFallRetryImage,
       tech: ["React", "Vite", "Python", "Flask", "TypeScript", "PostgreSQL"],
       github: "https://github.com/AntoineLAFITTE/SkateFallRetry/tree/main",
       live: "https://skate-fall-retry.vercel.app/",
@@ -35,7 +40,7 @@ export default function App() {
       title: "RENTCAR",
       description:
         "Design of an interactive model containing different pages for a Car renting Platform. From user landing page to reservation and payment confirmation.",
-      image: "https://via.placeholder.com/300x200/10b981/ffffff?text=Task+Manager",
+      image: RentCarImage,
       tech: ["Figma"],
       github: "#",
       live: "https://www.figma.com/proto/iOgJDofgNcg3rSeT3Y2zMu/RENTCAR?node-id=4-198&starting-point-node-id=4%3A198&t=9LocDZy5npOeQy5b-1",
@@ -43,8 +48,8 @@ export default function App() {
     {
       title: "Ultimate CheckList",
       description:
-        "Work in  progress - A feature-rich checklist application with user authentication, advanced UI/UX design, task filtering, and persistent storage. Built with Next.js, Tailwind CSS, and Zustand., .",
-      image: "https://via.placeholder.com/300x200/f59e0b/ffffff?text=Weather+App",
+        "Work in  progress - A feature-rich checklist application with user authentication, advanced UI/UX design, task filtering, and persistent storage. Built with Next.js, Tailwind CSS, and Zustand.",
+      image: UltimateChecklistImage,
       tech: ["Next.js", "Express.js", "React", "Tailwind CSS", "Framer Motion", "TypeScript", "PostgreSQL"],
       github: "#",
       live: "#",
@@ -171,7 +176,7 @@ export default function App() {
       <section id="home" className="pt-24 pb-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <img
-            src="https://via.placeholder.com/150x150/6b7280/ffffff?text=Profile"
+            src={profileImage}
             alt="Profile"
             className="w-32 h-32 rounded-full mx-auto mb-8 border-4 border-blue-200 object-cover"
           />
@@ -216,9 +221,6 @@ export default function App() {
               className="text-gray-600 hover:text-blue-600 transition-colors"
             >
               <Linkedin className="h-6 w-6" />
-            </a>
-            <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
-              <Mail className="h-6 w-6" />
             </a>
           </div>
         </div>
@@ -363,7 +365,12 @@ export default function App() {
             <p className="text-gray-600 mb-6">
               I'm always interested in hearing about new opportunities and interesting projects.
             </p>
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+
+            <form
+              action="https://formspree.io/f/xdkdeaew"
+              method="POST"
+              className="space-y-6"
+            >
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -372,6 +379,8 @@ export default function App() {
                   <input
                     id="name"
                     type="text"
+                    name="name"
+                    required
                     placeholder="Your name"
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   />
@@ -383,6 +392,8 @@ export default function App() {
                   <input
                     id="email"
                     type="email"
+                    name="email"
+                    required
                     placeholder="your.email@example.com"
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   />
@@ -395,6 +406,7 @@ export default function App() {
                 <input
                   id="subject"
                   type="text"
+                  name="subject"
                   placeholder="What's this about?"
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 />
@@ -405,6 +417,8 @@ export default function App() {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
+                  required
                   placeholder="Tell me about your project..."
                   rows="5"
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
@@ -421,6 +435,7 @@ export default function App() {
           </div>
         </div>
       </section>
+
 
       {/* Footer */}
       <footer className="py-8 px-4 border-t border-gray-200 bg-gray-50">
@@ -440,9 +455,6 @@ export default function App() {
             className="text-gray-600 hover:text-blue-600 transition-colors"
             >
               <Linkedin className="h-5 w-5" />
-            </a>
-            <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
-              <Mail className="h-5 w-5" />
             </a>
           </div>
         </div>
