@@ -73,7 +73,7 @@ export default function App() {
     },
   ]
 
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
     if (element) {
       element.scrollIntoView({ behavior: "smooth" })
@@ -420,7 +420,7 @@ export default function App() {
                   name="message"
                   required
                   placeholder="Tell me about your project..."
-                  rows="5"
+                  rows={5}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 />
               </div>
