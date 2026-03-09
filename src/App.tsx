@@ -5,7 +5,7 @@ import { Github, Linkedin, Mail, ExternalLink, Download, Code, Palette, Database
 import profileImage from "./assets/1610396085652.jpg";
 import skateFallRetryImage from "./assets/skatefallretry2.jpg";
 import RentCarImage from "./assets/rentcar4.jpg";
-import UltimateChecklistImage from "./assets/ultimatechecklist.png";
+import ReactMovieFinderImage from "./assets/reactmoviefinderimage.png";
 
 
 export default function App() {
@@ -46,17 +46,24 @@ export default function App() {
       live: "https://www.figma.com/proto/iOgJDofgNcg3rSeT3Y2zMu/RENTCAR?node-id=4-198&starting-point-node-id=4%3A198&t=9LocDZy5npOeQy5b-1",
     },
     {
-      title: "Ultimate CheckList",
+      title: "React Movie Finder",
       description:
-        "Work in  progress - A feature-rich checklist application with user authentication, advanced UI/UX design, task filtering, and persistent storage. Built with Next.js, Tailwind CSS, and Zustand.",
-      image: UltimateChecklistImage,
-      tech: ["Next.js", "Express.js", "React", "Tailwind CSS", "Framer Motion", "TypeScript", "PostgreSQL"],
-      github: "#",
-      live: "#",
+        "React Movie Finder is a web application built with React, TypeScript, and Vite and using OmdbAPI. It allows users to search for movies, view details, and make a list of favorites.",
+      image: ReactMovieFinderImage,
+      tech: ["TypeScript","React", "Vite", "CSS", "Omdb API"],
+      github: "https://github.com/AntoineLAFITTE/React-Movie-Finder",
+      live: "https://react-movie-finder-pied.vercel.app/",
     },
   ]
 
   const experience = [
+    {
+      title: "Master 1 Développement Web Full-Stack",
+      company: "Ynov Campus Toulouse",
+      period: "2025 - 2026",
+      description:
+        "Frameworks modernes de JavaScript, Python, Architecture Logiciel , Gestion de Projet IT, CI/CD ...",
+    },
     {
       title: "Foundations of Computer Science",
       company: "Holberton School",
@@ -199,7 +206,7 @@ export default function App() {
 
 
             <a
-              href="/antoine-lafitte-cv.pdf"
+              href="/Antoine_Lafitte__CV.pdf"
               download="Antoine_Lafitte_CV.pdf"
               className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg text-lg font-medium hover:bg-gray-50 transition-colors flex items-center justify-center"
               >
